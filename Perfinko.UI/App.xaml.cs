@@ -1,4 +1,7 @@
-﻿using Microsoft.UI.Xaml;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
@@ -6,6 +9,8 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using Microsoft.UI.Xaml.Shapes;
+using Perfinko.Core.Security;
+using Perfinko.Infrastructure.Security;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -27,6 +32,20 @@ namespace Perfinko.UI
     public partial class App : Application
     {
         private Window? _window;
+
+        public static IHost Host { get; } =
+            Microsoft.Extensions.Hosting.Host
+                .CreateDefaultBuilder()
+                .ConfigureServices((context, services) =>
+                {
+                    var options = context.Configuration
+                        .GetSection("CredentialStore")
+                        .Get<CredentialStoreOptions>();
+
+                    services.AddSingleton<ISecretStore>(_ => 
+                        new WindowsCredentialStore(options!.Namespace));
+                })
+                .Build();
 
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code

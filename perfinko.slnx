@@ -4,6 +4,8 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
+  <Project Path="Perfinko.Core/Perfinko.Core.csproj" Id="ccedee2c-a8fe-4bae-a35c-9aaa2609a7c0" />
+  <Project Path="Perfinko.Infrastructure/Perfinko.Infrastructure.csproj" Id="dbcde29b-8afb-4ea7-9f7d-8b9af1c9a8a0" />
   <Project Path="Perfinko.UI/Perfinko.UI.csproj">
     <Platform Solution="*|ARM64" Project="ARM64" />
     <Platform Solution="*|x64" Project="x64" />
