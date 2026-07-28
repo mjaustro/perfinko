@@ -1,9 +1,9 @@
 {
   "profiles": {
-    "perfinko (Package)": {
+    "Perfinko.UI (Package)": {
       "commandName": "MsixPackage"
     },
-    "perfinko (Unpackaged)": {
+    "Perfinko.UI (Unpackaged)": {
       "commandName": "Project"
     }
   }

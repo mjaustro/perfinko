@@ -9,14 +9,14 @@
   IgnorableNamespaces="uap rescap systemai">
 
   <Identity
-    Name="dfd1e52a-0db6-4d1d-a8f0-af6e64715365"
+    Name="8e8c03ae-173d-422d-8abb-7a774ae519b1"
     Publisher="CN=andre"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="dfd1e52a-0db6-4d1d-a8f0-af6e64715365" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="8e8c03ae-173d-422d-8abb-7a774ae519b1" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>perfinko</DisplayName>
+    <DisplayName>Perfinko.UI</DisplayName>
     <PublisherDisplayName>andre</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -35,8 +35,8 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
-        DisplayName="perfinko"
-        Description="perfinko"
+        DisplayName="Perfinko.UI"
+        Description="Perfinko.UI"
         BackgroundColor="transparent"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png">
