@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "perfinko (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "perfinko (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
